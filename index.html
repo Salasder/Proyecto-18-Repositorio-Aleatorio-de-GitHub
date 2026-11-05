@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub Repository Finder</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <header class="encabezado">
+            <h1>GitHub Repository Finder</h1>
+            <p>Encuentra repositorios interesantes en GitHub</p>
+        </header>
+
+        <!-- Selector de lenguaje -->
+        <div class="grupo-selector">
+
+            <label for="lenguaje">
+                Selecciona un lenguaje de programación:
+            </label>
+
+            <select id="lenguaje">
+                <option value="">Select a Language</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="C#">C#</option>
+                <option value="PHP">PHP</option>
+                <option value="TypeScript">TypeScript</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="C++">C++</option>
+                <option value="Go">Go</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Swift">Swift</option>
+                <option value="Kotlin">Kotlin</option>
+            </select>
+
+        </div>
+
+        <!-- Resultados -->
+        <section id="resultado" class="resultado" aria-live="polite">
+
+            <div class="estado-vacio">
+                <h2>Porfavor seleciona un language</h2>
+                <p>Selecciona un lenguaje para encontrar repositorios.</p>
+            </div>
+
+        </section>
+
+        <!-- Botón para otro repositorio -->
+        <button id="btn-refresh" class="btn-refresh" hidden>
+            ↻ Buscar otro repositorio
+        </button>
+
+        <!-- Botón para reintentar si ocurre un error -->
+        <button id="btn-retry" class="btn-retry" hidden>
+            Intentar nuevamente
+        </button>
+
+        <footer>
+            <p>Datos proporcionados por GitHub API</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
